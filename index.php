@@ -11,6 +11,6 @@
         <?php echo "Hello world!"; ?>
     </h1>
    I'm <?php echo $_REQUEST['name'] ?? 'Noname'; ?>
-    
+    <h1>Hello world!</h1>
 </body>
 </html>
