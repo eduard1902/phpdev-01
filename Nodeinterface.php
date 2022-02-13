@@ -9,6 +9,6 @@ interface NodeInterface
      * @RETURN Node[]
      */
     public function getChildren(): array;
-    public function addChildren(): self;
+    public function addChildren(Node $node): self;
 }
-?>
+

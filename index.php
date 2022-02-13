@@ -1,3 +1,25 @@
+<?php
+
+include './NodeInterface.php';
+include './NodeAbstract.php';
+include './Node.php';
+
+$tree =(new \Node('Electronics'))
+    ->addChild(
+        (new \Node('Televisions'))
+            ->addChild(new \Node('Tube'))
+            ->addChild(new \Node('LCD'))
+            ->addChild(new \Node('Plasma'))
+    )
+    ->addChild(
+        (new \Node('Portable  electronic'))
+            ->addChild((new \Node('MP3 players'))->addChild(new \Node('Flash')))
+            ->addChild(new \Node('CD players'))
+            ->addChild(new \Node('2 way radios'))
+    )
+    ;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +33,5 @@
         <?php echo "Hello world!"; ?>
     </h1>
    I'm <?php echo $_REQUEST['name'] ?? 'Noname'; ?>
-    <h1>Hello world!</h1>
 </body>
 </html>
