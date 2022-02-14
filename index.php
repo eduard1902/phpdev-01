@@ -1,23 +1,24 @@
 <?php
 
-include './NodeInterface.php';
-include './NodeAbstract.php';
-include './Node.php';
+include './tree/NodeInterface.php';
+include './tree/Node.php';
 
-$tree =(new \Node('Electronics'))
+$tree = (new \Node('Electronics'))
     ->addChild(
         (new \Node('Televisions'))
             ->addChild(new \Node('Tube'))
             ->addChild(new \Node('LCD'))
             ->addChild(new \Node('Plasma'))
-    )
+        )
     ->addChild(
-        (new \Node('Portable  electronic'))
+        (new \Node('Portable electronic'))
             ->addChild((new \Node('MP3 players'))->addChild(new \Node('Flash')))
             ->addChild(new \Node('CD players'))
             ->addChild(new \Node('2 way radios'))
-    )
+        )    
     ;
+
+    // $tree->print();
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +33,7 @@ $tree =(new \Node('Electronics'))
     <h1>
         <?php echo "Hello world!"; ?>
     </h1>
-   I'm <?php echo $_REQUEST['name'] ?? 'Noname'; ?>
+   <p>I'm <?php echo $_REQUEST['name'] ?? 'Noname'; ?></p>
+   <pre><?php echo $tree; ?></pre>
 </body>
 </html>
