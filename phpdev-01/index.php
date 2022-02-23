@@ -30,6 +30,7 @@ $tree = (new \Node('Electronics'))
     <title>Document</title>
 </head>
 <body>
+    <h1>Новый заголовок</h1>
     <h1>
         <?php echo "Hello world!"; ?>
     </h1>
